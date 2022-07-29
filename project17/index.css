@@ -1,0 +1,620 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+
+
+
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+   width: 100%;
+   min-height: 100vh;
+   background-color: #fff;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: rgb(16, 28, 20); */
+    background-color: rgb(18, 31, 22);
+}
+.hero .dotcircle{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 7;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    border: 0.1px solid rgb(255, 255, 255);
+    opacity: 0.2;
+}
+.hero .circle{
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    /* background-color: #fff; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-image: url("https://images.unsplash.com/photo-1601326167532-d457cd8186cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHJlZCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"); */
+    background-image: url("https://media.istockphoto.com/photos/closeup-of-colorful-roses-backdrop-wall-picture-id1140756861?b=1&k=20&m=1140756861&s=170667a&w=0&h=SBc7DxUwg84bdRKuom6p6cOHqaVS834Q2Z5gTaMNz70=");
+    mix-blend-mode: difference;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero .txt{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+    
+
+}
+.txt>h1{
+   
+     font-family: "Hello Paris Sans"; 
+
+     font-size: 10vw; 
+   
+    /* text-transform: uppercase; */
+    font-weight: 100;
+    line-height: 6vw;
+    color: rgb(255, 209, 196);
+
+}
+
+.nav{
+    
+    position: relative;
+    width: 100%;
+    height: 4vw;
+    /* background-color: #fff; */
+    padding: 1vh 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.nav .nleft{
+    cursor: pointer;
+    width: 10%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   color: rgb(255, 209, 196);
+
+    padding: 0 1.5vw;
+}
+.nleft>h2{
+    font-size: 1vw;
+}
+.nav .nright{
+    cursor: pointer;
+   width: 13%;
+   height: 100%;
+   /* background-color: antiquewhite; */
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 0.2vw;
+   color: rgb(255, 209, 196);
+   /* color: black; */
+}
+.nright>h1{
+    /* width: 1vw; */
+    font-size: 0.9vw;
+    /* padding-left: 1vw; */
+}
+.nav .ncentre{
+    width: 5vw;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ncentre>h1{
+    font-size: 2vw;
+    
+    /* text-transform: uppercase; */
+    /* color: rgb(116, 12, 12); */
+    color: rgb(209, 26, 26);
+
+}
+.viewcircle{
+    position: absolute;
+    z-index: 2;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background-color: rgb(16, 24, 19);
+    top: 50%;
+    right: 10%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid red;
+    color: rgb(255, 209, 196);
+    cursor: pointer;
+    
+}
+.viewcircle>h2{
+    font-size: 1.5vw;
+    
+}
+.hero .box{
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: #fff; */
+    display: flex;
+    align-items: center;
+    width: 40vw;
+    height: 10vh;
+
+}
+.box .section{
+    width: calc(100%/3);
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+}
+.section>i{
+    color: rgb(209, 26, 26);
+}
+.section>a{
+    font-size:"Bigilla";
+    color: rgb(255, 209, 196);
+    padding-top: 10px;
+}
+
+.imageslider{
+    display: flex;
+    align-items: center;
+
+
+    width: 100%;
+    height: 500px;
+    background-color: rgb(18, 31, 22);
+    white-space: nowrap;
+    overflow: auto;
+    overflow-y: hidden;
+    /* display: list-item;
+    grid-template-columns: auto  auto; */
+    gap: 50px;
+    /* display: flex; */
+   
+}
+ /* .imageslider::-webkit-scrollbar{
+    display: none;
+  
+}  */
+
+.imageslider>h1{
+    font-size: 4vw;
+    font-weight: 900;
+     font-family: bigilla;
+     position: absolute;
+     left: 0;
+    color:   rgb(255, 209, 196);
+     animation: abcd 10s linear infinite both;
+}
+@keyframes abcd{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateY(-100%);
+    }
+}
+.imageslider .slides{
+    flex-shrink: 0;
+
+}
+.imageslider .slides{
+    display: inline-block;
+    overflow: hidden;
+    width: 400px;
+    height: 100%;
+    background-color: aquamarine;
+    /* gap: 1px; */
+}
+/* .slides:nth-child(1){
+    background-image: url("https://images.unsplash.com/photo-1518709779341-56cf4535e94b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cm9zZXMlMjBmbG93ZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+.slides:nth-child(2){
+    background-image: url("https://images.unsplash.com/photo-1561848355-890d054dc55a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cm9zZXMlMjBmbG93ZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.slides:nth-child(3){
+    background-image: url("https://images.unsplash.com/photo-1607324281676-b7b663ec693b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHJvc2VzJTIwZmxvd2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.slides:nth-child(4){
+    background-image: url("https://images.unsplash.com/photo-1562064233-55bfa0c0c7ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHJvc2VzJTIwZmxvd2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* .slides:nth-child(5){
+    background-image: url("https://images.unsplash.com/photo-1603107776328-0a2e5b7d08e6?ixlib=rDB8MHxzZnaXJsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.slides:nth-child(6){
+    background-image: url("https://images.unsplash.com/photo-1500259783852-0ca9ce8a64dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.slides:nth-child(7){
+    background-image: url("https://images.unsplash.com/photo-1527631615371-98cbbff5125a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.slides:nth-child(8){
+    background-image: url("https://images.unsplash.com/photo-1482555670981-4de159d8553b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+
+.slidermove{
+    overflow: hidden;
+    width: 100%;
+    height: 608px;
+    background-color: rgb(18, 31, 22);
+    
+}
+.slidermove .move:nth-child(1){
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(18, 31, 22);
+}
+/* .move button{
+    background-color: rgb(18, 31, 22);
+    color: #fff;
+    margin-left: 30%;
+    position: absolute;
+    
+    width: 20%;
+    height: 5%;
+    margin-top: 42%;
+} */
+.move h1{
+    color:  #fff;
+    font-family: Hello Paris Sans Light;
+    margin-left: 25%;
+    margin-top: 8%;
+    font-size: 50px;
+
+}
+#a {
+    height: 40%;
+    width: 20%;
+    
+    background-size: cover;
+    margin-left: 3%;
+    margin-top:  4%;
+    background-image: url("https://images.ctfassets.net/h1eh3mhnbyvi/35oOjZdpheDtM1QAPWtAf7/ae81a73b5f49435ed05250f3b232564c/FTD_CategoryTile_Product_Merx_SameDayVDayHP.png?w=1920&fm=webp&q=70");
+}
+#a1 h1{
+    top: 60%;
+    position: absolute;
+    margin-left: 2%;
+}
+    
+
+#b {
+    height: 40%;
+    width: 20%;
+    
+    margin-left: 30%;
+    margin-top:-19%;
+    background-size: cover;
+    background-image: url("https://images.ctfassets.net/h1eh3mhnbyvi/1opYr5FMYJU4hFa7yMUkG0/788846379cbdeecfd66ae2e85e62f9e8/FTD_CategoryTile_Product_Merx_SpringHP.png?w=1920&fm=webp&q=70");
+    
+}
+#b1 h1{
+    top: 60%;
+    position: absolute;
+    margin-left: 2%;
+}
+#c {
+    height:40%;
+    width: 20%;
+
+    margin-left: 60%;
+    margin-top:-18.5%;
+    background-size: cover;
+    background-image:url("https://images.ctfassets.net/h1eh3mhnbyvi/6f7nXKp53nXMikPIiQHcUr/2911c2dd3c891b32f95e082b8396bc71/FTD_CategoryTile_Product_Merx_GetWellHP.png?w=1920&fm=webp&q=70") ;
+}
+#c1 h1{
+   top: 60%;
+    position: absolute;
+    margin-left: 5%;
+}
+.slidermove .move:nth-child(2){
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    display: inline-block;
+    width: 12vw;
+    height: 100%;
+    background-color: rgb(255, 209, 196);
+    transition: 2s;
+}
+#ae{
+    width: 40%;
+    height: 100%;
+   background-size: cover;
+    background-image: url("https://www.fnp.com/images/pr/x/v20210121174847/beautiful-flowers-and-heart-mug-in-pretty-wooden-basket_1.jpg");
+    
+}
+#ea{
+    width:60% ;
+    height: 100%;
+    position: absolute;
+    background-color:#3C4619;
+    left: 40%;
+    top: 0%;
+}
+#ea p{
+    margin-left: 28%;
+    color: #fff;
+    margin-top: 4%;
+}
+#ea button{
+    width: 30%;
+    height: 8%;
+    border-radius: 10%,10%;
+    margin-left: 35%;
+    margin-top:10%;
+}
+.slidermove .move:nth-child(3){
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    display: inline-block;
+    width: 8vw;
+    height: 100%;
+    background-color: rgb(18, 31, 22);
+    transition: 2s;
+
+}
+#be{
+    height: 43%;
+    width: 20%;
+    position: absolute;
+    background-color: blue;
+    margin-left: 5%;
+    margin-top: 5%;
+    background-image: url("https://images.ctfassets.net/h1eh3mhnbyvi/1Pk0mURx88JWv3KknL1Edo/d499fc8cff6e6d094737306ce25773b9/FTD_CategoryTile_Merx_Product_Graduation_HP.jpg?w=1920&fm=webp&q=70");
+    background-size: cover;
+}
+#be h1{
+    position: absolute;
+    margin-top: 100%;
+    margin-left: -10%;
+}
+#eb{
+    height: 43%;
+    width: 20%;
+    position: absolute;
+    background-color: blue;
+    margin-top:5%;
+    margin-left: 30%;
+    background-image: url("https://images.ctfassets.net/h1eh3mhnbyvi/3nsEpFzohi9bYmEZCI7ssq/ae9f973d1819c6c897f2216fb20869b2/FTD_CategoryTile_Product_Merx_CincoDeMayo_HP.jpg?w=1920&fm=webp&q=70");
+    background-size: cover;
+}
+#eb h1{
+    position: absolute;
+    margin-top: 100%;
+    margin-left: 3%;
+}
+#cb{
+    height: 43%;
+    width:20%;
+    background-color: blue;
+    margin-left:55%;
+    margin-top: 5%;
+    background-image: url("https://images.ctfassets.net/h1eh3mhnbyvi/3oHZOPxYFPFoNq0s1YCDb1/30dc0115e517ca2a6ccfd45ad9574c7a/FTD_CategoryTile_Product_Merx_Anniversary_HP.jpg?w=1920&fm=webp&q=70");
+    background-size: cover;
+}
+#cb h1{
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 1%;
+}
+.slidermove .move:nth-child(4){
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    display: inline-block;
+    width: 4vw;
+    height: 100%;
+    background-color: #374172;
+    transition: 2s;
+
+}
+#ca{
+    height: 100%;
+    width: 60%;
+    background-image: url("http://sc04.alicdn.com/kf/H59f2ad8ea4ff4b5ca2a7be203b63c541c.jpg");
+}
+#ce{
+    height: 100%;
+    width: 100%;
+    margin-left: 60%;
+    /* background-color: bisque; */
+    position: absolute;
+    margin-top: -46.4%;
+    background-size: cover;
+}
+#ce h1{
+    margin-left: 7%;
+    margin-top: 20%;
+}
+#ce p{
+    margin-top: 10%;
+    margin-left: 6%;
+}
+#ce button{
+    height: 10%;
+    width: 40%;
+    margin-left: 30%;
+    margin-top:10%;
+}
+.fourth{
+    position: relative;
+    width: 100%;
+    height: 605px;
+    background-color:rgb(18, 31, 22);
+    overflow: hidden;
+}
+.fourth>.txt3{
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    top: 60%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    /* background-color: rgb(33, 32, 30); */
+}
+.txt3>h1{
+
+  
+    width: 10px;
+    line-height: 90px;
+    font-size: 60px;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+}
+/* .txt3>h1 span{ */
+    /* display: inline-block; */
+/* } */
+/* .txt>h1 span:nth-child(1){
+    /* display: inline-block; */
+    /* color: red; */
+
+
+.txt>h1 span{
+    display: inline-block;
+}
+.txt3>h4{
+    font-size: 10px;
+    padding-left: 5px;
+    color: #fff;
+    letter-spacing: 4px;
+}
+.txt3 .image2{
+    
+    position: absolute;
+    opacity: 0.7;
+    z-index: 1;
+    top: -20%;
+    right: -95%;
+    transform: rotate(-5deg);
+    width: 300px;
+    height: 450px;
+    background-color: #fff;
+    background-image: url("https://media.istockphoto.com/photos/beautiful-flower-arrangement-on-white-festive-tables-picture-id607914702?k=20&m=607914702&s=612x612&w=0&h=8Dab24IdgQfsgsNmP56If-8JkmRVV_Z2Ia1Cfd5w36s=");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.fourth>.image3{
+
+
+    position: absolute;
+    z-index: 2;
+    width: 250px;
+    height: 350px;
+    top: 20%;
+    right:10%;
+    /* transform: translate(-50%,-50%); */
+    /* transform-origin: center; */
+    /* transform-origin: bottom right 60px; */
+    transform-origin: bottom right 60px;
+    transform: rotate(5deg);
+    background-color: #fff;
+    /* background-image: url("https://images.unsplash.com/photo-1656203549816-f7b8e48222a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60"); */
+    /* background-image: url("https://images.unsplash.com/photo-1656215706608-4adcf6c8391f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDl8Q0R3dXdYSkFiRXd8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60"); */
+    background-image: url("https://media.istockphoto.com/photos/fresh-flowers-wedding-decoration-picture-id1323774036?k=20&m=1323774036&s=612x612&w=0&h=oIVryZKMBbpl54BkmFMNhNCFcmH-7BrYFLZwQWSl27A=");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    
+}
+
+.fourth>.image4{
+  position: absolute;
+  z-index: 3;
+  width:350px;
+  height: 450px;
+  top: 15%;
+  right:23%;}
+
+.fourth>.image3{
+    background-image: url("https://media.istockphoto.com/photos/bunch-of-tulips-in-a-nordic-style-apartment-3d-rendering-picture-id931168594?k=20&m=931168594&s=612x612&w=0&h=CpKTWq699Gqt2a_8NYHwR3oallRSPrWHajS0rty27WY=");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: cover;
+}
+.fourth .image5{
+  position: absolute;
+  opacity: 0.9;
+  z-index: 4;
+  bottom: -10%;
+  left:45%;
+  transform: rotate(5deg);
+  width: 200px;
+  height: 300px;
+  background-color: #fff;
+   background-image: url("https://media.istockphoto.com/photos/white-flowers-in-interior-picture-id1053054610?k=20&m=1053054610&s=612x612&w=0&h=NRifiRA9jpY1zIsYLIpECP9eQvAJEw2em7K2C5HWeeg=");
+   
+    background-repeat: no-repeat;
+    background-position: center;
+  
+}
